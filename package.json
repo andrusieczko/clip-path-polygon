@@ -1,0 +1,16 @@
+{
+  "author": "Karol Andrusieczko",
+  "license": "MIT",
+  "name": "clipPathPolygon",
+  "url": "https://github.com/andrusieczko/jquery-clippath-polygon",
+  "description": "jQuery plugin that makes easy to use clip-path on whatever tag under different browsers",
+  "version": "0.9",
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-uglify": "~0.2.2",
+    "mocha": "",
+    "sinon": "",
+    "expect.js": "",
+    "jquery": ""
+  }
+}
