@@ -22,13 +22,13 @@ In *Firefox* and in W3C standard what you should do is:
 
 and somewhere in the file:
 
-`<svg>
+```<svg>
     <defs>
         <clippath id="my-definition">
             <polygon points="0 0, 145 0, 150 20, 155 0, 300 0, 300 200, 0 200, 0 0"></polygon>
         </clippath>
     </defs>
-</svg>`
+</svg>```
 
 *clipPathPolygon* does this job for you!
 
