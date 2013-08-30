@@ -46,6 +46,45 @@ If you want to compile the whole package with unit tests, run:
 
 I use [mocha](http://visionmedia.github.io/mocha/) and [sinon](http://sinonjs.org) for testing.
 
+API
+-------
+
+Definition:
+`clipPath(points [, options])`
+
+You cam call it on a jQuery element:
+```javascript
+$('#my-element').clipPath(points);
+```
+
+where `points` is an array of two-elements arrays: `[[x0, y0], [x1, y1], [x2, y2]...]` crops the element to this area defined by these points.
+
+There are some options that you can use:
+<table>
+  <thead>
+    <th>Option</th>
+    <th>Default</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>isForWebkit</td>
+      <td>*true*</td>
+      <td>specifies if `-webkit-clip-path` property should be added to element</td>
+    </tr>
+    <tr>
+      <td>isForSvg</td>
+      <td>*true*</td>
+      <td>specifies if `-clip-path` property and `<svg>` element should be added</td>
+    </tr>
+    <tr>
+      <td>svgDefId</td>
+      <td>*clipPathPolygonGenId*</td>
+      <td>specifies *id* of SVG clippath definition</td>
+    </tr>
+  </tbody>
+</table>
+
 Example
 -------
 
@@ -67,4 +106,22 @@ Example
     </div>
   </body>
 </html>
+```
+
+which gives you such an html code:
+
+```html
+<div style="width: 300px; height: 200px">
+  <div id="test" style="width: 100%; height: 100%; background-color: green;
+    -webkit-clip-path: polygon(0 0, 145px 0, 150px 20px, 155px 0, 300px 0, 300px 200px, 0 200px, 0 0);
+    clip-path: url(#clipPathPolygonGenId)"></div>
+</div>
+
+<svg>
+  <defs>
+    <clippath id="clipPathPolygonGenId">
+      <polygon points="0 0, 145 0, 150 20, 155 0, 300 0, 300 200, 0 200, 0 0"></polygon>
+    </clippath>
+  </defs>
+</svg>
 ```
