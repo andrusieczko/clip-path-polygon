@@ -108,7 +108,7 @@ Example
 </html>
 ```
 
-which gives you such an html code:
+which gives you such an html code (remember that `svg` element has to have *http://www.w3.org/2000/svg* namespace!):
 
 ```html
 <div style="width: 300px; height: 200px">
