@@ -22,13 +22,15 @@ In *Firefox* and in W3C standard what you should do is:
 
 and somewhere in the file:
 
-```<svg>
+```html
+<svg>
     <defs>
         <clippath id="my-definition">
             <polygon points="0 0, 145 0, 150 20, 155 0, 300 0, 300 200, 0 200, 0 0"></polygon>
         </clippath>
     </defs>
-</svg>```
+</svg>
+```
 
 *clipPathPolygon* does this job for you!
 
@@ -47,7 +49,8 @@ I use [mocha](http://visionmedia.github.io/mocha/) and [sinon](http://sinonjs.or
 Example
 -------
 
-`<html>
+```html
+<html>
   <head>
     <script src="jquery.min.js"></script>
     <script src="clipPathPolygon.min.js"></script>
@@ -63,4 +66,5 @@ Example
       <div id="test" style="width: 100%; height: 100%; background-color: green"></div>
     </div>
   </body>
-</html>`
+</html>
+```
