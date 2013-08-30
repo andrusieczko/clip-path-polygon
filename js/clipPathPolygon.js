@@ -22,7 +22,8 @@
     }
     exports.ClipPath = ClipPath;
   } else {
-    root.ClipPath = ClipPath;
+    var globalVariable = window || root;
+    globalVariable.ClipPath = ClipPath;
   }
 
   ClipPath.prototype = {
