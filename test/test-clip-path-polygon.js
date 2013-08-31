@@ -1,13 +1,6 @@
-// TODO
-global.jQuery = {
-  fn: function() {
-  }
-};
-
-var ClipPath = require("../js/clipPathPolygon");
+var ClipPath = require("../js/clip-path-polygon.js");
 var sinon = require('sinon');
 
-// TODO: packages.json
 var expect = require('expect.js');
 
 describe('ClipPath', function() {

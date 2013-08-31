@@ -1,4 +1,4 @@
-clipPathPolygon
+clip-path-polygon
 ===============
 
 This is a jQuery plugin that makes using clip-path property easy on whatever tag under different browsers.
@@ -32,7 +32,7 @@ and somewhere in the file:
 </svg>
 ```
 
-*clipPathPolygon* does this job for you!
+*clip-path-polygon* does this job for you!
 
 ## Installation
 
@@ -55,10 +55,10 @@ $myElement.clipPath();
 
 ### Browser
 
-Download [clipPathPolygon.min.js (minified)](https://raw.github.com/andrusieczko/clipPathPolygon/master/build/clipPathPolygon.min.js) or [clipPathPolygon.js (dev)](https://raw.github.com/andrusieczko/clipPathPolygon/master/js/clipPathPolygon.js) and add it to you HTML file:
+Download [clip-path-polygon.min.js (minified)](https://raw.github.com/andrusieczko/clip-path-polygon/master/build/clip-path-polygon.min.js) or [clip-path-polygon.js (dev)](https://raw.github.com/andrusieczko/clip-path-polygon/master/js/clip-path-polygon.js) and add it to you HTML file:
 
 ```html
-<script src="clipPathPolygon.min.js"></script>
+<script src="clip-path-polygon.min.js"></script>
 ```
 
 Compilation
@@ -114,7 +114,7 @@ Example
 <html>
   <head>
     <script src="jquery.min.js"></script>
-    <script src="clipPathPolygon.min.js"></script>
+    <script src="clip-path-polygon.min.js"></script>
     <script>
       $(function() {
         var points = [[0, 0], [145, 0], [150, 20], [155, 0], [300, 0], [300, 200], [0, 200], [0, 0]];
