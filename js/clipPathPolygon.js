@@ -6,6 +6,8 @@
  * Copyright 2013 Karol Andrusieczko
  * Released under the MIT license
  */
+ 
+ var jQuery = jQuery || (require && require('jquery'));
 (function($) {
 
   var ClipPath = function(jQuery, $el, points, options) {

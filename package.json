@@ -1,10 +1,18 @@
 {
   "author": "Karol Andrusieczko",
   "license": "MIT",
-  "name": "clipPathPolygon",
+  "name": "clip-path-polygon",
+  "main": "js/clipPathPolygon",
   "url": "https://github.com/andrusieczko/jquery-clippath-polygon",
   "description": "jQuery plugin that makes easy to use clip-path on whatever tag under different browsers",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/andrusieczko/clipPathPolygon.git"
+  },
+  "dependencies": {
+    "jquery": "~1.8.3"
+  },
   "devDependencies": {
     "grunt-contrib-jshint": "",
     "grunt-contrib-uglify": "",

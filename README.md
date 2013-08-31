@@ -34,17 +34,39 @@ and somewhere in the file:
 
 *clipPathPolygon* does this job for you!
 
-Installation
-------------
+## Installation
 
-Just download [clipPathPolygon.min.js](https://raw.github.com/andrusieczko/clipPathPolygon/master/build/clipPathPolygon.min.js) and include to your project.
+### Node
+
+Install with [https://npmjs.org](NPM) or add it to your `package.json`:
+
+`$ npm install clip-path-polygon`
+
+Then require it:
+
+```javascript
+require('clip-path-polygon');
+```
+
+and use:
+```javascript
+$myElement.clipPath();
+```
+
+### Browser
+
+Download [clipPathPolygon.min.js (minified)](https://raw.github.com/andrusieczko/clipPathPolygon/master/build/clipPathPolygon.min.js) or [clipPathPolygon.js (dev)](https://raw.github.com/andrusieczko/clipPathPolygon/master/js/clipPathPolygon.js) and add it to you HTML file:
+
+```html
+<script src="clipPathPolygon.min.js"></script>
+```
 
 Compilation
 -----------
 If you want to compile the whole package with unit tests, run:
 `npm install`
 
-I use [mocha](http://visionmedia.github.io/mocha/) and [sinon](http://sinonjs.org) for testing.
+I use [mocha](http://visionmedia.github.io/mocha/), [sinonjs](http://sinonjs.org) and [expect.js](https://github.com/LearnBoost/expect.js) for testing.
 
 API
 -------
