@@ -6,8 +6,7 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         banner: '/*!\n'
-        + ' * jQuery <%= pkg.name %> Plugin v<%= pkg.version %>\n'
-        + ' * Released: <%= grunt.template.today("yyyy-mm-dd") %>\n'
+        + ' * jQuery <%= pkg.name %> Plugin v<%= pkg.version %> (<%= grunt.template.today("yyyy-mm-dd") %>)\n'
         + ' * <%= pkg.description %>\n'
         + ' * <%= pkg.url %>\n'
         + ' * \n'
