@@ -9,7 +9,7 @@ What it does?
 
 Let's say that you want to achieve something like this:
 
-<img src="http://www.andrusieczko.pl/files_to_share/clipPath.png" width="300">
+<img src="http://www.andrusieczko.pl/others/files_to_share/clipPath.png" width="300">
 
 So need to have a rectangle (e.g. 300x200) and you have to **crop** this image like with such coordinates: 
 `(0; 0), (145; 0), (150; 20), (155; 0), (300; 0), (300; 200), (0; 200), (0; 0)`
