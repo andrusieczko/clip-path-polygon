@@ -1,4 +1,4 @@
-clip-path-polygon [![Build Status](https://travis-ci.org/andrusieczko/clip-path-polygon.png?branch=master)](https://travis-ci.org/andrusieczko/clip-path-polygon)
+clip-path-polygon [![Build Status](https://travis-ci.org/andrusieczko/clip-path-polygon.png?branch=master)](https://travis-ci.org/andrusieczko/clip-path-polygon) [![Coverage Status][coveralls-image]][coveralls]
 ===============
 
 This is a jQuery plugin that makes using clip-path property easy on whatever tag under different browsers.
