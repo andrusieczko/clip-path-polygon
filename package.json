@@ -20,5 +20,8 @@
     "sinon": "~1.7.3",
     "expect.js": "0.2.0",
     "grunt-shell": "~0.6.1"
+  },
+  "script": {
+    "test": "grunt test"
   }
 }
