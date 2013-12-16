@@ -18,13 +18,22 @@ module.exports = function(grunt) {
         src: '<%= pkg.main %>.js',
         dest: 'build/<%= pkg.name %>.min.js'
       }
-    }
+    },
+    shell: {
+		jsUnitTests: {
+			command: 'mocha test/**.js',
+			options: {
+			  stdout: true,
+			  failOnError: true
+			}
+		}
+	}
   });
 
-  // Load the plugin that provides the "uglify" task.
+  grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  // Default task(s).
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', ['uglify', 'shell:jsUnitTests']);
+  grunt.registerTask('test', ['shell:jsUnitTests']);
 
 };
