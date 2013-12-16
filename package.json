@@ -21,7 +21,7 @@
     "expect.js": "0.2.0",
     "grunt-shell": "~0.6.1"
   },
-  "script": {
+  "scripts": {
     "test": "grunt test"
   }
 }
