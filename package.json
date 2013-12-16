@@ -19,7 +19,8 @@
     "mocha": "~1.12.0",
     "sinon": "~1.7.3",
     "expect.js": "0.2.0",
-    "grunt-shell": "~0.6.1"
+    "grunt-shell": "~0.6.1",
+    "grunt-mocha-cov": "~0.1.1"
   },
   "scripts": {
     "test": "grunt test"

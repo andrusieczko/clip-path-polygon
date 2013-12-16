@@ -27,13 +27,33 @@ module.exports = function(grunt) {
 			  failOnError: true
 			}
 		}
+	},
+	mochacov: {
+	  coverage: {
+	    options: {
+          coveralls: {
+    	    serviceName: 'travis-ci'
+     	  }
+        }
+      },
+      test: {
+        options: {  
+          reporter: 'spec'
+          }
+      },
+	  options: {
+	    files: 'test/*.js'
+	  }
 	}
   });
 
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-mocha-cov');
+
+  grunt.registerTask('travis', ['mochacov:coverage']);
 
   grunt.registerTask('default', ['uglify', 'shell:jsUnitTests']);
-  grunt.registerTask('test', ['shell:jsUnitTests']);
+  grunt.registerTask('test', ['shell:jsUnitTests', 'mochacov:test']);
 
 };
