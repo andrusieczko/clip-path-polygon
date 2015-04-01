@@ -1,13 +1,13 @@
 /*!
- * jQuery clip-path-polygon Plugin v0.1.3 (2013-08-31)
+ * jQuery clip-path-polygon Plugin v0.1.5 (2015-04-01)
  * jQuery plugin that makes easy to use clip-path on whatever tag under different browsers
  * https://github.com/andrusieczko/clip-path-polygon
- * 
- * Copyright 2013 Karol Andrusieczko
+ *
+ * Copyright 2015 Karol Andrusieczko
  * Released under MIT license
  */
- 
- var jQuery = jQuery || (require && require('jquery'));
+
+var jQuery = jQuery || (require && require('jquery'));
 (function($) {
 
   var ClipPath = function(jQuery, $el, points, options) {
@@ -37,6 +37,7 @@
     isForWebkit: true,
     isForSvg: true,
     svgDefId: 'clipPathPolygonGenId',
+    isPercentage: false,
 
     create: function() {
       this._createClipPath(this.points);
@@ -53,31 +54,38 @@
     },
 
     _createWebkitClipPath: function(points) {
-      var clipPath = "polygon(" + this._translatePoints(points, true) + ")";
+      var clipPath = "polygon(" + this._translatePoints(points, true, this.isPercentage) + ")";
       this.$el.css('-webkit-clip-path', clipPath);
     },
 
     _createSvgBasedClipPath: function(points) {
-      this.$('#' + this.svgDefId + '').find('polygon').attr('points', this._translatePoints(points, false));
+      this.$('#' + this.svgDefId + '').find('polygon').attr('points', this._translatePoints(points, false, this.isPercentage));
       this.$el.css('clip-path', 'url(#' + this.svgDefId + ')');
     },
 
 
-    _translatePoints: function(points, withPxs) {
+    _translatePoints: function(points, withUnit, isPercentage) {
       var result = [];
       for (var i in points) {
-        var x = this._handlePxs(points[i][0], withPxs);
-        var y = this._handlePxs(points[i][1], withPxs);
+        var x = this._handlePxs(points[i][0], withUnit, isPercentage);
+        var y = this._handlePxs(points[i][1], withUnit, isPercentage);
         result.push(x + ' ' + y);
       }
       return result.join(', ');
     },
 
-    _handlePxs: function(number, withPxs) {
-      if (number === 0 || !withPxs) {
+    _handlePxs: function(number, withUnit, isPercentage) {
+      if (number === 0) {
         return number;
       }
-      return number + "px";
+      if (!withUnit) {
+        if (isPercentage) {
+          return number / 100;
+        }
+        return number;
+      }
+
+      return number + (isPercentage ? "%" : "px");
     },
 
     _createSvgElement: function(elementName) {
@@ -90,6 +98,9 @@
         var $defs = this._createSvgElement('defs');
         $svg.append($defs);
         var $clippath = this._createSvgElement('clipPath').attr('id', this.svgDefId);
+        if (this.isPercentage) {
+          $clippath.get(0).setAttribute('clipPathUnits', 'objectBoundingBox');
+        }
         $defs.append($clippath);
         var $polygon = this._createSvgElement('polygon');
         $clippath.append($polygon);
@@ -101,6 +112,7 @@
       this.isForWebkit = (options && options.isForWebkit) || this.isForWebkit;
       this.isForSvg = (options && options.isForSvg) || this.isForSvg;
       this.svgDefId = (options && options.svgDefId) || this.svgDefId;
+      this.isPercentage = (options && options.isPercentage || this.isPercentage);
     }
   };
 
