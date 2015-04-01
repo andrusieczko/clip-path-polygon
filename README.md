@@ -124,8 +124,6 @@ There are some options that you can use:
 Examples
 -------
 
-**Take a look at the [example html file](https://raw.githubusercontent.com/andrusieczko/clip-path-polygon/master/resources/example.html)!**
-
 ### Basic
 
 ```html
