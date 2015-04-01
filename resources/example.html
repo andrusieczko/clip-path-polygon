@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="../build/clip-path-polygon.min.js"></script>
+    <script>
+      $(function() {
+        var points1 = [[0, 0], [145, 0], [150, 20], [155, 0], [300, 0], [300, 200], [0, 200], [0, 0]];
+        $('#testAbsolute').clipPath(points1, {
+          svgDefId: 'absoluteClippathDef'
+        });
+
+        var points2 = [[0, 0], [49, 0], [50, 10], [51, 0], [100, 0], [100, 100], [0, 100], [0, 0]];
+        $('#testRelative').clipPath(points2, {
+          svgDefId: 'relativeClippathDef',
+          isPercentage: true
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div style="width: 300px; height: 200px; padding: 10px">
+      <div id="testAbsolute" style="width: 100%; height: 100%; background-color: green"></div>
+    </div>
+    <div style="width: 300px; height: 200px; padding: 10px">
+      <div id="testRelative" style="width: 100%; height: 100%; background-color: blue"></div>
+    </div>
+  </body>
+</html>

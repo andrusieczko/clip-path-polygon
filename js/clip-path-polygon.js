@@ -1,13 +1,13 @@
 /*!
- * jQuery clip-path-polygon Plugin v0.1.3 (2013-08-31)
+ * jQuery clip-path-polygon Plugin v0.1.5 (2015-04-01)
  * jQuery plugin that makes easy to use clip-path on whatever tag under different browsers
  * https://github.com/andrusieczko/clip-path-polygon
- * 
- * Copyright 2013 Karol Andrusieczko
+ *
+ * Copyright 2015 Karol Andrusieczko
  * Released under MIT license
  */
- 
- var jQuery = jQuery || (require && require('jquery'));
+
+var jQuery = jQuery || (require && require('jquery'));
 (function($) {
 
   var ClipPath = function(jQuery, $el, points, options) {
@@ -80,11 +80,11 @@
       }
       if (!withUnit) {
         if (isPercentage) {
-          return number/100;
+          return number / 100;
         }
         return number;
       }
-      
+
       return number + (isPercentage ? "%" : "px");
     },
 
