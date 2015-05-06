@@ -93,7 +93,7 @@ var jQuery = jQuery || (require && require('jquery'));
     },
 
     _createSvgDefs: function() {
-      if (this.$('#' + this.svgDefId + '').size() === 0) {
+      if (this.$('#' + this.svgDefId + '').length === 0) {
         var $svg = this._createSvgElement('svg').attr('width', 0).attr('height', 0);
         var $defs = this._createSvgElement('defs');
         $svg.append($defs);
