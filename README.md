@@ -5,7 +5,7 @@ This is a jQuery plugin that makes using clip-path property easy on whatever tag
 
 Tested on latest Chrome, Safari, Firefox and Opera.
 
-It should work on Chrome >=31, Firefox >=31, Safari >=7 and Opera >=30.
+It should work on Chrome ≥31, Firefox ≥31, Safari ≥7 and Opera ≥30.
 
 What it does?
 
