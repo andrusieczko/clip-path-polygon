@@ -3,7 +3,9 @@ clip-path-polygon [![Build Status](https://travis-ci.org/andrusieczko/clip-path-
 
 This is a jQuery plugin that makes using clip-path property easy on whatever tag under different browsers.
 
-Tested on Chrome and Firefox so far.
+Tested on latest Chrome, Safari, Firefox and Opera.
+
+It should work on Chrome >=31, Firefox >=31, Safari >=7 and Opera >=30.
 
 What it does?
 
