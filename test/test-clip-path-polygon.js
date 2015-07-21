@@ -1,3 +1,7 @@
+var jsdom = require('jsdom').jsdom;
+document = jsdom("");
+window = document.parentWindow;
+
 var ClipPath = require("../js/clip-path-polygon.js");
 var sinon = require('sinon');
 

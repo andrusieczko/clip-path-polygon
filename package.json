@@ -5,22 +5,23 @@
   "main": "js/clip-path-polygon",
   "url": "https://github.com/andrusieczko/clip-path-polygon",
   "description": "jQuery plugin that makes easy to use clip-path on whatever tag under different browsers",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "repository": {
     "type": "git",
     "url": "git://github.com/andrusieczko/clip-path-polygon.git"
   },
   "dependencies": {
-    "jquery": "~1.8.3"
+    "jquery": "2.1.4"
   },
   "devDependencies": {
+    "expect.js": "0.2.0",
     "grunt-contrib-jshint": "",
     "grunt-contrib-uglify": "",
-    "mocha": "~1.12.0",
-    "sinon": "~1.7.3",
-    "expect.js": "0.2.0",
+    "grunt-mocha-cov": "0.4.0",
     "grunt-shell": "~0.6.1",
-    "grunt-mocha-cov": "~0.1.1"
+    "jsdom": "^3.1.2",
+    "mocha": "~1.12.0",
+    "sinon": "~1.7.3"
   },
   "scripts": {
     "test": "grunt test"
