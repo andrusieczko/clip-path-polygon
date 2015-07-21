@@ -10,10 +10,13 @@
 var jQuery = jQuery || (require && require('jquery'));
 (function($) {
 
+  var id = 0;
+
   var ClipPath = function(jQuery, $el, points, options) {
     this.$ = jQuery;
     this.$el = $el;
     this.points = points;
+    this.svgDefId = 'clipPathPolygonGenId' + id++;
 
     this.processOptions(options);
   };
@@ -36,7 +39,7 @@ var jQuery = jQuery || (require && require('jquery'));
 
     isForWebkit: true,
     isForSvg: true,
-    svgDefId: 'clipPathPolygonGenId',
+    svgDefId: null,
     isPercentage: false,
 
     create: function() {

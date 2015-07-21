@@ -79,6 +79,10 @@ If you want to compile the whole package with unit tests, run:
 
 I use [mocha](http://visionmedia.github.io/mocha/), [sinonjs](http://sinonjs.org) and [expect.js](https://github.com/LearnBoost/expect.js) for testing.
 
+Changelog
+---------
+Changlelog is available here: [CHANGELOG.md](https://github.com/andrusieczko/clip-path-polygon/blob/master/CHANGELOG.md)
+
 API
 -------
 
@@ -117,7 +121,7 @@ There are some options that you can use:
     </tr>
     <tr>
       <td>svgDefId</td>
-      <td>*clipPathPolygonGenId*</td>
+      <td>*clipPathPolygonGenId<unique_id>*</td>
       <td>specifies *id* of SVG clippath definition</td>
     </tr>
   </tbody>
