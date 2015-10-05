@@ -64,6 +64,18 @@ and use:
 $myElement.clipPath();
 ```
 
+### Bower
+
+`$ bower install clip-path-polygon --save`
+
+and then add `bower_components/clip-path-polygon/build/clip-path-polygon.min.js` to your scripts.
+
+```html
+<script src="bower_components/clip-path-polygon/build/clip-path-polygon.min.js"></script>
+```
+
+I'm assuming here that your `bower` installation folder is called `bower_components`.
+
 ### Browser
 
 Download [clip-path-polygon.min.js (minified)](https://raw.github.com/andrusieczko/clip-path-polygon/master/build/clip-path-polygon.min.js) or [clip-path-polygon.js (dev)](https://raw.github.com/andrusieczko/clip-path-polygon/master/js/clip-path-polygon.js) and add it to you HTML file:
