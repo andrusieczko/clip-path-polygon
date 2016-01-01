@@ -8,8 +8,8 @@
  */
 
 var jQuery = jQuery || (require && require('jquery'));
-(function($) {
 
+(function($) {
   var id = 0;
 
   var ClipPath = function(jQuery, $el, points, options) {
@@ -112,13 +112,13 @@ var jQuery = jQuery || (require && require('jquery'));
     },
 
     processOptions: function(options) {
-      this.isForWebkit = (options && options.isForWebkit) || this.isForWebkit;
-      this.isForSvg = (options && options.isForSvg) || this.isForSvg;
-      this.svgDefId = (options && options.svgDefId) || this.svgDefId;
+      this.isForWebkit = (options && typeof(options.isForWebkit !== "undefined")) ? options.isForWebkit : this.isForWebkit;
+      this.isForSvg = (options && typeof(options.isForSvg !== "undefined")) ? options.isForSvg : this.isForSvg;
       this.isPercentage = (options && options.isPercentage || this.isPercentage);
+      this.svgDefId = (options && options.svgDefId) || this.svgDefId;
     }
   };
-
+  
   $.fn.clipPath = function(points, options) {
     return this.each(function() {
       var $el = $(this);
