@@ -1,6 +1,6 @@
 var jsdom = require('jsdom').jsdom;
 document = jsdom("");
-window = document.parentWindow;
+window = document.defaultView;
 
 var ClipPath = require("../js/clip-path-polygon.js");
 var sinon = require('sinon');
@@ -35,6 +35,38 @@ describe('ClipPath', function() {
       [3, 2],
       [6, 7]
     ]);
+  });
+
+  describe('processOptions', function() {
+    it('should have defaults', function() {
+      // given
+      expect(cut.isForWebkit).to.be.equal(true);
+      expect(cut.isForSvg).to.be.equal(true);
+      expect(cut.svgDefId).to.be.equal('clipPathPolygonGenId0');
+      expect(cut.isPercentage).to.be.equal(false);
+    });
+
+    it ('should process passed options', function() {
+      // given
+      var isForWebkit = false;
+      var isForSvg = false;
+      var isPercentage = true;
+      var svgDefId = 'definition';
+
+      // when
+      cut = new ClipPath(function() {}, $el, [], {
+        isForWebkit: isForWebkit,
+        isForSvg: isForSvg,
+        isPercentage: isPercentage,
+        svgDefId: svgDefId
+      });
+
+      // then
+      expect(cut.isForWebkit).to.be.equal(isForWebkit);
+      expect(cut.isForSvg).to.be.equal(isForSvg);
+      expect(cut.isPercentage).to.be.equal(isPercentage);
+      expect(cut.svgDefId).to.be.equal(svgDefId);
+    });
   });
 
   describe('_handlePxs', function() {
