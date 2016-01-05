@@ -1,5 +1,9 @@
 # clip-path-polygon changelog
 
+### 0.1.7 (2016-01-01)
+* [BUGFIX] parameters `isForWebkit`, `isForSvg` were ignored when `false` was passed as value
+* jsdom 3.1.2 -> 7.2.2
+
 ### 0.1.6 (2015-07-21)
 * [IMPROVEMENT] `svgDefId` not mandatory anymore when using more than one `.clipPath` in Firefox
 * tests updated with `jsdom`
