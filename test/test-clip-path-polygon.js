@@ -67,6 +67,19 @@ describe('ClipPath', function() {
       expect(cut.isPercentage).to.be.equal(isPercentage);
       expect(cut.svgDefId).to.be.equal(svgDefId);
     });
+
+    it ('should process passed options with partial options', function() {
+      // given
+
+      // when
+      cut = new ClipPath(function() {}, $el, [], {});
+
+      // then
+      expect(cut.isForWebkit).to.be.equal(true);
+      expect(cut.isForSvg).to.be.equal(true);
+      expect(cut.isPercentage).to.be.equal(false);
+      expect(cut.svgDefId).to.contain('clipPathPolygonGenId');
+    });
   });
 
   describe('_handlePxs', function() {

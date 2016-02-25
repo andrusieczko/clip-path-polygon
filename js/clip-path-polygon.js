@@ -112,8 +112,8 @@ var jQuery = jQuery || (require && require('jquery'));
     },
 
     processOptions: function(options) {
-      this.isForWebkit = (options && typeof(options.isForWebkit !== "undefined")) ? options.isForWebkit : this.isForWebkit;
-      this.isForSvg = (options && typeof(options.isForSvg !== "undefined")) ? options.isForSvg : this.isForSvg;
+      this.isForWebkit = (options && typeof(options.isForWebkit) !== "undefined") ? options.isForWebkit : this.isForWebkit;
+      this.isForSvg = (options && typeof(options.isForSvg) !== "undefined") ? options.isForSvg : this.isForSvg;
       this.isPercentage = (options && options.isPercentage || this.isPercentage);
       this.svgDefId = (options && options.svgDefId) || this.svgDefId;
     }
