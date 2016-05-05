@@ -7,7 +7,7 @@
  * Released under MIT license
  */
 
-var jQuery = jQuery || (require && require('jquery'));
+var jQuery = jQuery || window.jQuery || (require && require('jquery'));
 
 (function($) {
   var id = 0;
