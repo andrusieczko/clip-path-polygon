@@ -1,5 +1,5 @@
 /*!
- * jQuery clip-path-polygon Plugin v0.1.5 (2015-04-01)
+ * jQuery clip-path-polygon Plugin v0.1.9 (2016-05-05)
  * jQuery plugin that makes easy to use clip-path on whatever tag under different browsers
  * https://github.com/andrusieczko/clip-path-polygon
  *
@@ -7,7 +7,8 @@
  * Released under MIT license
  */
 
-var jQuery = jQuery || window.jQuery || (require && require('jquery'));
+var globalVariable = window || root;
+var jQuery = jQuery || globalVariable.jQuery || (require && require('jquery'));
 
 (function($) {
   var id = 0;
@@ -27,7 +28,6 @@ var jQuery = jQuery || window.jQuery || (require && require('jquery'));
     }
     exports.ClipPath = ClipPath;
   } else {
-    var globalVariable = window || root;
     globalVariable.ClipPath = ClipPath;
   }
 
