@@ -1,7 +1,8 @@
 # clip-path-polygon changelog
 
 ### 0.1.9 (2016-05-05)
-* [BUGFIX] added `window.jQuery` as an option of loading jQuery 
+* [BUGFIX] add `window.jQuery` as an option of loading jQuery
+* [BUGFIX] hide created `svg` elements so that they do not appear on the bottom of the page
 
 ### 0.1.8 (2016-02-26)
 * [BUGFIX] parameters `isForWebkit`, `isForSvg` were set to false when empty map was passed options
