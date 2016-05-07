@@ -1,9 +1,9 @@
 /*!
- * jQuery clip-path-polygon Plugin v0.1.9 (2016-05-05)
+ * jQuery clip-path-polygon Plugin v0.1.10 (2016-05-07)
  * jQuery plugin that makes easy to use clip-path on whatever tag under different browsers
  * https://github.com/andrusieczko/clip-path-polygon
- *
- * Copyright 2015 Karol Andrusieczko
+ * 
+ * Copyright 2016 Karol Andrusieczko
  * Released under MIT license
  */
 
@@ -97,7 +97,10 @@ var jQuery = jQuery || globalVariable.jQuery || (require && require('jquery'));
 
     _createSvgDefs: function() {
       if (this.$('#' + this.svgDefId + '').length === 0) {
-        var $svg = this._createSvgElement('svg').attr('width', 0).attr('height', 0).css('display', 'none');
+        var $svg = this._createSvgElement('svg').attr('width', 0).attr('height', 0).css({
+          'position': 'absolute',
+          'visibility': 'hidden'
+        });
         var $defs = this._createSvgElement('defs');
         $svg.append($defs);
         var $clippath = this._createSvgElement('clipPath').attr('id', this.svgDefId);
