@@ -1,5 +1,8 @@
 # clip-path-polygon changelog
 
+### 0.1.10 (2016-05-07)
+* [BUGFIX] change `display: none` on the created `svg` elements to `position: absolute; visibility: hidden` (sometimes `display: none` didn't work in Firefox)
+
 ### 0.1.9 (2016-05-05)
 * [BUGFIX] add `window.jQuery` as an option of loading jQuery
 * [BUGFIX] hide created `svg` elements so that they do not appear on the bottom of the page
