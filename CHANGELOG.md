@@ -1,5 +1,8 @@
 # clip-path-polygon changelog
 
+### 0.1.11 (2016-12-20)
+* [BUGFIX] Chrome 55+ hot fix: render SVG first, then add clip-path property
+
 ### 0.1.10 (2016-05-07)
 * [BUGFIX] change `display: none` on the created `svg` elements to `position: absolute; visibility: hidden` (sometimes `display: none` didn't work in Firefox)
 
