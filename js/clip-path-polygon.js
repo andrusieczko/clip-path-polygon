@@ -1,5 +1,5 @@
 /*!
- * jQuery clip-path-polygon Plugin v0.1.10 (2016-05-07)
+ * jQuery clip-path-polygon Plugin v0.1.11 (2016-12-20)
  * jQuery plugin that makes easy to use clip-path on whatever tag under different browsers
  * https://github.com/andrusieczko/clip-path-polygon
  * 
@@ -48,11 +48,11 @@ var jQuery = jQuery || globalVariable.jQuery || (require && require('jquery'));
 
     _createClipPath: function(points) {
       this._createSvgDefs();
-      if (this.isForWebkit) {
-        this._createWebkitClipPath(points);
-      }
       if (this.isForSvg) {
         this._createSvgBasedClipPath(points);
+      }
+      if (this.isForWebkit) {
+        this._createWebkitClipPath(points);
       }
     },
 
