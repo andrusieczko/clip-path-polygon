@@ -89,7 +89,7 @@ Compilation
 If you want to compile the whole package with unit tests, run:
 `npm install` and then `grunt` (compilation) or `grunt test` (tests).
 
-I use [mocha](http://visionmedia.github.io/mocha/), [sinonjs](http://sinonjs.org) and [expect.js](https://github.com/LearnBoost/expect.js) for testing.
+I use [mocha](http://mochajs.org/), [sinonjs](http://sinonjs.org) and [expect.js](https://github.com/LearnBoost/expect.js) for testing.
 
 Changelog
 ---------
