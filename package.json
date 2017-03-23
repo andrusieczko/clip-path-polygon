@@ -5,7 +5,7 @@
   "main": "js/clip-path-polygon",
   "url": "https://github.com/andrusieczko/clip-path-polygon",
   "description": "jQuery plugin that makes easy to use clip-path on whatever tag under different browsers",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "repository": {
     "type": "git",
     "url": "git://github.com/andrusieczko/clip-path-polygon.git"

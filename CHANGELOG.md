@@ -1,5 +1,8 @@
 # clip-path-polygon changelog
 
+### 0.1.12 (2017-03-23)
+* [BUGFIX] Webpack issue "Critical dependency: require function is used in a way in which dependencies cannot be statically extracted" fixed by @manniL
+
 ### 0.1.11 (2016-12-20)
 * [BUGFIX] Chrome 55+ hot fix: render SVG first, then add clip-path property
 
