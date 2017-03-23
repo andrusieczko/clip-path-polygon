@@ -8,7 +8,7 @@
  */
 
 var globalVariable = window || root;
-var jQuery = jQuery || globalVariable.jQuery || (require && require('jquery'));
+var jQuery = jQuery || globalVariable.jQuery || require("jquery");
 
 (function($) {
   var id = 0;
