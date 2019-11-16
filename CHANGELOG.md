@@ -1,5 +1,8 @@
 # clip-path-polygon changelog
 
+### 0.1.14 (2019-11-16)
+* [UPDATE] Bump jQuery version to 3.4.1 (@elenatorro)
+
 ### 0.1.13 (2018-05-12)
 * [FIX] Fix jQuery vulnerability issue by bumping the version to 3.x; update a few other dev deps
 
