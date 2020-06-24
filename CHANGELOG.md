@@ -1,5 +1,8 @@
 # clip-path-polygon changelog
 
+### 0.1.15 (2020-06-24)
+* [UPDATE] Bump jQuery version to 3.5.0 (dependabot)
+
 ### 0.1.14 (2019-11-16)
 * [UPDATE] Bump jQuery version to 3.4.1 (@elenatorro)
 

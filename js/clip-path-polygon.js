@@ -1,9 +1,9 @@
 /*!
- * jQuery clip-path-polygon Plugin v0.1.14 (2019-11-16)
+ * jQuery clip-path-polygon Plugin v0.1.15 (2020-06-24)
  * jQuery plugin that makes easy to use clip-path on whatever tag under different browsers
  * https://github.com/andrusieczko/clip-path-polygon
  * 
- * Copyright 2019 Karol Andrusieczko
+ * Copyright 2020 Karol Andrusieczko
  * Released under MIT license
  */
 
