@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "expect.js": "0.3.1",
-    "grunt": "1.0.1",
+    "grunt": "1.5.3",
     "grunt-contrib-jshint": "1.1.0",
     "grunt-contrib-uglify": "v3.3.0",
     "grunt-mocha-cov": "0.4.0",
